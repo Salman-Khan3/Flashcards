@@ -1,0 +1,131 @@
+body {
+  background: #000 url('https://static1.srcdn.com/wordpress/wp-content/uploads/2024/03/my-hero-academia-season-7-visual.jpg') no-repeat center center fixed;
+  background-size: cover; /* Ensure the background image covers the entire page */
+  text-align: center; /* Center all text */
+  display: -webkit-box; /* Safari */
+  display: -moz-box; /* Firefox */
+  display: -ms-flexbox; /* Internet Explorer */
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ensure the body takes the full height of the viewport */
+  margin: 0; /* Remove default margin */
+  color: wheat; /* Change text color to wheat */
+}
+
+.App {
+  text-align: center;
+}
+
+.flashcard-container {
+  display: -webkit-box; /* Safari */
+  display: -moz-box; /* Firefox */
+  display: -ms-flexbox; /* Internet Explorer */
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ensure the container takes the full height of the viewport */
+  width: 100vw; /* Ensure the container takes the full width of the viewport */
+}
+
+.flashcard {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+  background: black; /* Background color */
+  color: white; /* Text color */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content within the flashcard */
+  padding: 10px;
+  text-align: center; /* Center text within the flashcard */
+  position: relative; /* Ensure the flashcard is positioned relative to its container */
+  margin: auto; /* Center the flashcard within the container */
+}
+
+.flashcard .front, .flashcard .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Safari */
+  -moz-backface-visibility: hidden; /* Firefox */
+  -ms-backface-visibility: hidden; /* Internet Explorer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 0px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Safari and older browsers */
+  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Firefox */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center text within the front and back of the flashcard */
+}
+
+.flashcard .back {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); /* Safari */
+}
+
+.flashcard.flipped .front {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); /* Safari */
+}
+
+.flashcard.flipped .back {
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg); /* Safari */
+}
+
+.flashcard img {
+  max-width: 100%;
+  max-height: 100px;
+  margin-bottom: 10px;
+}
+
+.flashcard.easy {
+  background-color: #d4edda;
+  color: black; /* Text color for easy flashcards */
+}
+
+.flashcard.medium {
+  background-color: #fff3cd;
+.flashcard-controls {
+  margin-top: 20px;
+  display: -webkit-box; /* Safari */
+  display: -moz-box; /* Firefox */
+  display: -ms-flexbox; /* Internet Explorer */
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}
+
+.flashcard-controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flashcard-controls .info-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.flashcard-controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
